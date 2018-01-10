@@ -13,7 +13,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{StaticResource MaterialDesignFont}" Icon="images/test.ico" WindowState="Maximized" WindowStyle="None">
+        FontFamily="{StaticResource MaterialDesignFont}" Icon="images/test.ico" WindowState="Maximized" WindowStyle="None" Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -29,7 +29,7 @@
             <DockPanel>
                 <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel>
-                        <Button Content="用户管理" FontFamily="Fonts/HYQiHeiX1-55W"/>
+                        <Button Content="用户管理" FontFamily="Fonts/HYQiHeiX1-55W" Click="Button_Click"/>
                         <Button Content="Nice Popup" />
                         <Button Content="Can't Touch This" IsEnabled="False" />
                         <Separator/>
@@ -40,10 +40,11 @@
             </DockPanel>
         </materialDesign:ColorZone>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+            <!--<Canvas Margin="8,8,8,8" Name="MainCanvas"/>  <DockPanel Margin="8,8,8,8" Name="MainCanvas" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/> -->
+            <ScrollViewer Margin="0,0,0,0" x:Name="MyScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                <WrapPanel Margin="0,0,0,0" Name="MainCanvas" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}" HorizontalAlignment="Center"/>
+            </ScrollViewer>
+            
         </Grid>
     </DockPanel>
 </Window>

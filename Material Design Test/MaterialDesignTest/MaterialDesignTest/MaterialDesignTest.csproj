@@ -90,10 +90,10 @@
     <Compile Include="controlUserCards.xaml.cs">
       <DependentUpon>controlUserCards.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Database\MaterialDesignTest.Designer.cs">
+    <Compile Include="LeakTestDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MaterialDesignTest.xsd</DependentUpon>
+      <DependentUpon>LeakTestDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -118,16 +118,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Database\MaterialDesignTest.xsc">
-      <DependentUpon>MaterialDesignTest.xsd</DependentUpon>
+    <None Include="LeakTestDataSet.xsc">
+      <DependentUpon>LeakTestDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Database\MaterialDesignTest.xsd">
+    <None Include="LeakTestDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MaterialDesignTest.Designer.cs</LastGenOutput>
+      <LastGenOutput>LeakTestDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Database\MaterialDesignTest.xss">
-      <DependentUpon>MaterialDesignTest.xsd</DependentUpon>
+    <None Include="LeakTestDataSet.xss">
+      <DependentUpon>LeakTestDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,6 +152,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MaterialDesignTest.mdf</DependentUpon>
     </Content>
+    <Resource Include="images\Administrator.png" />
+    <Resource Include="images\Operator.png" />
+    <Resource Include="images\IMG_2708.JPG" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
