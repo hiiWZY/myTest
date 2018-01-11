@@ -31,10 +31,16 @@
                         <Image Source="images/Administrator.png" Height="128" Width="128" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
                     </materialDesign:ColorZone>
 
-                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Margin="0,0,0,0" Name="InfoStackPanel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Grid>
-                            <TextBlock FontFamily="微软雅黑" FontSize="28" HorizontalAlignment="Center">王震宇</TextBlock>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="1" Width="Auto"  TextAlignment="Left"  Name="RealName" FontFamily="微软雅黑" FontSize="28"  Height="Auto" Margin="0,0,0,0"></TextBlock>
                         </Grid>
+
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
@@ -70,9 +76,9 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
                         </Grid.RowDefinitions>
-                        <TextBox materialDesign:HintAssist.Hint="用户名" materialDesign:HintAssist.IsFloating="True"
+                        <TextBox Name="UserName"  materialDesign:HintAssist.Hint="用户名" materialDesign:HintAssist.IsFloating="True"
                                  Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16" >测试1</TextBox>
-                        <PasswordBox Grid.Row="1" materialDesign:HintAssist.Hint="密码" materialDesign:HintAssist.IsFloating="True"
+                        <PasswordBox Name="UserPassword" Grid.Row="1" materialDesign:HintAssist.Hint="密码" materialDesign:HintAssist.IsFloating="True"
                                  Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16"></PasswordBox>
                         <TextBox Grid.Row="2" materialDesign:HintAssist.Hint="真实姓名" materialDesign:HintAssist.IsFloating="True"
                                  Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16">王震宇</TextBox>

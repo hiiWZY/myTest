@@ -29,6 +29,11 @@
         <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                             Mode="PrimaryMid" DockPanel.Dock="Top">
             <DockPanel>
+                <materialDesign:Chip Margin="0,0,0,0" Content="王震宇"  FontFamily="微软雅黑" FontSize="15" IsEnabled="False" Visibility="Visible">
+                    <materialDesign:Chip.Icon>
+                        <Image  Source="images/Administrator.Png" />
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>
                 <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel>
                         <Button Content="用户管理" FontFamily="Fonts/HYQiHeiX1-55W" Click="Button_Click"/>
@@ -38,7 +43,7 @@
                         <Button Content="Goodbye"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Fonts/HYQiHeiX1-55W" Text="{Binding 真实姓名}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontFamily="Fonts/HYQiHeiX1-55W" Text="测试Demo"></TextBlock>
             </DockPanel>
         </materialDesign:ColorZone>
         <Grid>

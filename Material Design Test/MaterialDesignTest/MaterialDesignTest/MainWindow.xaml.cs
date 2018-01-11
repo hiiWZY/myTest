@@ -23,9 +23,10 @@ namespace MaterialDesignTest
     {
 
         MaterialDesignTest.LeakTestDataSet leakTestDataSet;
-        // Load data into the table Users. You can modify this code as needed.
         MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter;
         System.Windows.Data.CollectionViewSource usersViewSource ;
+        //UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
+
 
 
         public MainWindow()
@@ -36,7 +37,6 @@ namespace MaterialDesignTest
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             leakTestDataSet = ((MaterialDesignTest.LeakTestDataSet)(this.FindResource("leakTestDataSet")));
-            // Load data into the table Users. You can modify this code as needed.
             leakTestDataSetUsersTableAdapter = new MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter();
             leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
             usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
@@ -47,17 +47,19 @@ namespace MaterialDesignTest
 
         private void LoadUserCards()
         {
-
-
-            usersViewSource.View.MoveCurrentToFirst();
+            //LeakTestDataSet.UsersDataTable usersDataTable = new LeakTestDataSet.UsersDataTable();
+            //usersTableAdapter.Fill(usersDataTable);
+            
+            //usersViewSource.View.MoveCurrentToFirst();
             MainCanvas.Children.Clear();
-            controlUserCards[] cUserCards = new controlUserCards[(int)leakTestDataSetUsersTableAdapter.GetUsersScalar()];
             controlEditUser[] cEditUser = new controlEditUser[(int)leakTestDataSetUsersTableAdapter.GetUsersScalar()];
-            for (int i = 0; i < cUserCards.Length; i++)
-            {
-                //cUserCards[i] = new controlUserCards();
-                //MainCanvas.Children.Add(cUserCards[i]);
+            for (int i = 0; i < cEditUser.Length; i++)
+            {   
                 cEditUser[i] = new controlEditUser();
+                cEditUser[i].user.UserName = leakTestDataSet.Users.Rows[i][1].ToString();
+                cEditUser[i].user.UserPassword = leakTestDataSet.Users.Rows[i][2].ToString();
+                cEditUser[i].user.RealName = leakTestDataSet.Users.Rows[i][3].ToString();
+                usersViewSource.View.MoveCurrentToNext();
                 MainCanvas.Children.Add(cEditUser[i]);
             }
 

@@ -58,3 +58,15 @@ C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesign
 C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\controlEditUser.g.cs
 C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\controlEditUser.baml
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.dll
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.Core.dll
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.dll
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\System.Windows.Interactivity.dll
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.xml
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.xml
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.Core.xml
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\controlEditUser.g.cs
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\controlEditUser.baml
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\Test.g.cs
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\Test.baml
