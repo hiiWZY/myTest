@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MaterialDesignTest"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="600">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -21,29 +21,27 @@
     <Grid>
         <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" Margin="4 4 4 4" >
             <materialDesign:Flipper.FrontContent>
-                <Grid Height="256" Width="200">
+                <Grid Height="384" Width="300">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="160" />
+                        <RowDefinition Height="238" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     
                     <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch">
-                        <!--<materialDesign:PackIcon Kind="AccountCircle" Height="128" Width="128" 
-                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />-->
                         <Image Source="images/Administrator.png" Height="128" Width="128" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
                     </materialDesign:ColorZone>
-                    
+
                     <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock FontFamily="微软雅黑" FontSize="22">王  震  宇</TextBlock>
+                        <TextBlock FontFamily="微软雅黑" FontSize="26">王震宇</TextBlock>
                         <Button Style="{StaticResource MaterialDesignFlatButton}"
                                 Command="{x:Static materialDesign:Flipper.FlipCommand}"
-                                Margin="0 4 0 0"
-                                >EDIT</Button>
+                                Margin="0 12 0 0"
+                                >编辑</Button>
                     </StackPanel>
                 </Grid>
             </materialDesign:Flipper.FrontContent>
             <materialDesign:Flipper.BackContent>
-                <Grid Height="256" Width="200">
+                <Grid Height="384" Width="300">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />

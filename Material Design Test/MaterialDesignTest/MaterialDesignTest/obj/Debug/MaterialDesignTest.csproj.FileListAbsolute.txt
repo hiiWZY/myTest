@@ -47,3 +47,14 @@ F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\Ma
 F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\MaterialDesignTest.csproj.CoreCompileInputs.cache
 F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\MaterialDesignTest.exe
 F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\MaterialDesignTest.pdb
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\MaterialDesignTest.csprojResolveAssemblyReference.cache
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.dll
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\System.Windows.Interactivity.dll
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.xml
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\controlEditUser.g.cs
+C:\Bizerba\2_Test Project\C#\Material Design\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\controlEditUser.baml

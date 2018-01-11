@@ -21,8 +21,12 @@ namespace MaterialDesignTest
     /// </summary>
     public partial class MainWindow : Window
     {
-        LeakTestDataSet leakTestDataSet = new LeakTestDataSet();
-        UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
+
+        MaterialDesignTest.LeakTestDataSet leakTestDataSet;
+        // Load data into the table Users. You can modify this code as needed.
+        MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter;
+        System.Windows.Data.CollectionViewSource usersViewSource ;
+
 
         public MainWindow()
         {
@@ -31,17 +35,30 @@ namespace MaterialDesignTest
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            leakTestDataSet = ((MaterialDesignTest.LeakTestDataSet)(this.FindResource("leakTestDataSet")));
+            // Load data into the table Users. You can modify this code as needed.
+            leakTestDataSetUsersTableAdapter = new MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter();
+            leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
+            usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
+            usersViewSource.View.MoveCurrentToFirst();
             LoadUserCards();
         }
 
+
         private void LoadUserCards()
         {
-            //usersTableAdapter.GetUsersScalar();
+
+
+            usersViewSource.View.MoveCurrentToFirst();
             MainCanvas.Children.Clear();
-            for (int i = 0; i < usersTableAdapter.GetUsersScalar(); i++)
+            controlUserCards[] cUserCards = new controlUserCards[(int)leakTestDataSetUsersTableAdapter.GetUsersScalar()];
+            controlEditUser[] cEditUser = new controlEditUser[(int)leakTestDataSetUsersTableAdapter.GetUsersScalar()];
+            for (int i = 0; i < cUserCards.Length; i++)
             {
-                MainCanvas.Children.Add(new controlUserCards());
+                //cUserCards[i] = new controlUserCards();
+                //MainCanvas.Children.Add(cUserCards[i]);
+                cEditUser[i] = new controlEditUser();
+                MainCanvas.Children.Add(cEditUser[i]);
             }
 
 

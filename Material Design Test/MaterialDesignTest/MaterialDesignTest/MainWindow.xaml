@@ -13,7 +13,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{StaticResource MaterialDesignFont}" Icon="images/test.ico" WindowState="Maximized" WindowStyle="None" Loaded="Window_Loaded">
+        FontFamily="{StaticResource MaterialDesignFont}" Icon="images/test.ico" WindowState="Maximized" WindowStyle="SingleBorderWindow" Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -21,9 +21,11 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <local:LeakTestDataSet x:Key="leakTestDataSet"/>
+            <CollectionViewSource x:Key="usersViewSource" Source="{Binding Users, Source={StaticResource leakTestDataSet}}"/>
         </ResourceDictionary>
     </Window.Resources>
-    <DockPanel>
+    <DockPanel DataContext="{StaticResource usersViewSource}">
         <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                             Mode="PrimaryMid" DockPanel.Dock="Top">
             <DockPanel>
@@ -36,15 +38,14 @@
                         <Button Content="Goodbye"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Fonts/HYQiHeiX1-55W">Material Design 测试123</TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Fonts/HYQiHeiX1-55W" Text="{Binding 真实姓名}"></TextBlock>
             </DockPanel>
         </materialDesign:ColorZone>
         <Grid>
-            <!--<Canvas Margin="8,8,8,8" Name="MainCanvas"/>  <DockPanel Margin="8,8,8,8" Name="MainCanvas" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/> -->
+            <!--<WrapPanel Margin="0,0,0,0" Name="MainCanvas" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}" HorizontalAlignment="Center"/> -->
             <ScrollViewer Margin="0,0,0,0" x:Name="MyScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                 <WrapPanel Margin="0,0,0,0" Name="MainCanvas" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}" HorizontalAlignment="Center"/>
             </ScrollViewer>
-            
         </Grid>
     </DockPanel>
 </Window>
