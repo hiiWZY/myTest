@@ -22,9 +22,9 @@ namespace MaterialDesignTest
     public partial class MainWindow : Window
     {
 
-        MaterialDesignTest.LeakTestDataSet leakTestDataSet;
-        MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter;
-        System.Windows.Data.CollectionViewSource usersViewSource ;
+        public MaterialDesignTest.LeakTestDataSet leakTestDataSet;
+        public MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter;
+        public System.Windows.Data.CollectionViewSource usersViewSource ;
         //UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
 
 
@@ -49,17 +49,27 @@ namespace MaterialDesignTest
         {
             //LeakTestDataSet.UsersDataTable usersDataTable = new LeakTestDataSet.UsersDataTable();
             //usersTableAdapter.Fill(usersDataTable);
-            
+
             //usersViewSource.View.MoveCurrentToFirst();
+            leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
             MainCanvas.Children.Clear();
             controlEditUser[] cEditUser = new controlEditUser[(int)leakTestDataSetUsersTableAdapter.GetUsersScalar()];
             for (int i = 0; i < cEditUser.Length; i++)
             {   
                 cEditUser[i] = new controlEditUser();
-                cEditUser[i].user.UserName = leakTestDataSet.Users.Rows[i][1].ToString();
-                cEditUser[i].user.UserPassword = leakTestDataSet.Users.Rows[i][2].ToString();
-                cEditUser[i].user.RealName = leakTestDataSet.Users.Rows[i][3].ToString();
-                usersViewSource.View.MoveCurrentToNext();
+                cEditUser[i].user.UserID= int.Parse(leakTestDataSet.Users.Rows[i][0].ToString());
+                cEditUser[i].user.UserName = leakTestDataSet.Users.Rows[i][1].ToString().Trim();
+                cEditUser[i].user.UserPassword = leakTestDataSet.Users.Rows[i][2].ToString().Trim();
+                cEditUser[i].UserPassword.Password = cEditUser[i].user.UserPassword;
+                cEditUser[i].user.RealName = leakTestDataSet.Users.Rows[i][3].ToString().Trim();
+                cEditUser[i].user.TopPower = bool.Parse(leakTestDataSet.Users.Rows[i][4].ToString());
+                cEditUser[i].user.SpotCheck = bool.Parse(leakTestDataSet.Users.Rows[i][5].ToString());
+                cEditUser[i].user.Production = bool.Parse(leakTestDataSet.Users.Rows[i][6].ToString());
+                cEditUser[i].user.SampleCheck = bool.Parse(leakTestDataSet.Users.Rows[i][7].ToString());
+                cEditUser[i].user.Repair = bool.Parse(leakTestDataSet.Users.Rows[i][8].ToString());
+                cEditUser[i].user.Program = bool.Parse(leakTestDataSet.Users.Rows[i][9].ToString());
+                cEditUser[i].user.Browse = bool.Parse(leakTestDataSet.Users.Rows[i][10].ToString());
+                cEditUser[i].user.DebugMode = bool.Parse(leakTestDataSet.Users.Rows[i][11].ToString());
                 MainCanvas.Children.Add(cEditUser[i]);
             }
 

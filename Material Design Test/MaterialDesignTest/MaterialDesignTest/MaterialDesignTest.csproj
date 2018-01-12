@@ -176,11 +176,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\MaterialDesignTest.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Database\MaterialDesignTest_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MaterialDesignTest.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="images\Administrator.png" />
     <Resource Include="images\Operator.png" />

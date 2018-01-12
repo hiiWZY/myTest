@@ -18,6 +18,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
+
     <Grid>
         <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" Margin="4 4 4 4" >
             <materialDesign:Flipper.FrontContent>
@@ -28,17 +29,12 @@
                     </Grid.RowDefinitions>
 
                     <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch">
-                        <Image Source="images/Administrator.png" Height="128" Width="128" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
+                        <Image Source="images/Administrator.png" Height="168" Width="168" VerticalAlignment="Center" HorizontalAlignment="Center" Name="UserPhoto"></Image>
                     </materialDesign:ColorZone>
 
                     <StackPanel Margin="0,0,0,0" Name="InfoStackPanel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="1" Width="Auto"  TextAlignment="Left"  Name="RealName" FontFamily="微软雅黑" FontSize="28"  Height="Auto" Margin="0,0,0,0"></TextBlock>
+                            <TextBlock Width="Auto"  TextAlignment="Center"  Name="RealName" FontFamily="微软雅黑" FontSize="28"  Height="Auto" Margin="0,0,0,0">zhenyu</TextBlock>
                         </Grid>
 
                         <Grid>
@@ -47,7 +43,7 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Button Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:Flipper.FlipCommand}" Margin="0 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20">编辑</Button>
-                            <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Margin="30 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20">删除</Button>
+                            <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Margin="30 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="DeleteButton" >删除</Button>
                         </Grid>
                     </StackPanel>
                 </Grid>
@@ -62,7 +58,7 @@
                         <StackPanel Orientation="Horizontal">
                             <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
                                 Command="{x:Static materialDesign:Flipper.FlipCommand}"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Left" Click="Button_Click">
                                 <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
                             </Button>
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"  FontFamily="微软雅黑">返回</TextBlock>
@@ -79,9 +75,9 @@
                         <TextBox Name="UserName"  materialDesign:HintAssist.Hint="用户名" materialDesign:HintAssist.IsFloating="True"
                                  Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16" >测试1</TextBox>
                         <PasswordBox Name="UserPassword" Grid.Row="1" materialDesign:HintAssist.Hint="密码" materialDesign:HintAssist.IsFloating="True"
-                                 Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16"></PasswordBox>
-                        <TextBox Grid.Row="2" materialDesign:HintAssist.Hint="真实姓名" materialDesign:HintAssist.IsFloating="True"
-                                 Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16">王震宇</TextBox>
+                                 Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16" PasswordChanged="UserPassword_PasswordChanged"  ></PasswordBox>
+                        <TextBox  Grid.Row="2" materialDesign:HintAssist.Hint="真实姓名" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 8 0 0" FontFamily="微软雅黑" FontSize="16" Name="RealNameEdit"></TextBox>
                         <Grid Grid.Row="3">
                             <GroupBox Width="Auto" Height="Auto"  BorderThickness="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Style="{DynamicResource MaterialDesignGroupBox}" FontFamily="微软雅黑" FontSize="16" Header="权限管理" Margin="0,5,0,0">
                                 <Grid>
@@ -97,35 +93,35 @@
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">最高</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="TopPower"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">点检</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="SpotCheck"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">生产</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="Production"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">抽检</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="SampleCheck"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">返修</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="Repair"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">编程</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="Program"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">浏览</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="Browse"></ToggleButton>
                                     </StackPanel>
                                     <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Margin="0 12 0 0" HorizontalAlignment="Center">
                                         <TextBlock VerticalAlignment="Center" FontFamily="微软雅黑">调试</TextBlock>
-                                        <ToggleButton Margin="8 0 0 0"></ToggleButton>
+                                        <ToggleButton Margin="8 0 0 0" Name="DebugMode"></ToggleButton>
                                     </StackPanel>
                                 </Grid>
                             </GroupBox>
