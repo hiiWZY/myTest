@@ -13,7 +13,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{StaticResource MaterialDesignFont}" Icon="images/test.ico" WindowState="Maximized" WindowStyle="SingleBorderWindow" Loaded="Window_Loaded">
+        FontFamily="{StaticResource MaterialDesignFont}" Icon="images/test.ico" WindowState="Maximized" WindowStyle="SingleBorderWindow" Loaded="Window_Loaded" MinHeight="600" MinWidth="600">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -28,23 +28,32 @@
     <DockPanel DataContext="{StaticResource usersViewSource}">
         <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                             Mode="PrimaryMid" DockPanel.Dock="Top">
-            <DockPanel>
-                <materialDesign:Chip Margin="0,0,0,0" Content="王震宇"  FontFamily="微软雅黑" FontSize="15" IsEnabled="False" Visibility="Visible">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="16*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="wPromptInfo" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontFamily="微软雅黑" Text="测试Demo"></TextBlock>
+                <materialDesign:Chip Name="CurrentUserIcon"  Grid.Column="1" Margin="0,0,0,0" Content="王震宇"  FontFamily="微软雅黑" FontSize="15" IsEnabled="False" Visibility="Visible" HorizontalAlignment="Right">
                     <materialDesign:Chip.Icon>
                         <Image  Source="images/Administrator.Png" />
                     </materialDesign:Chip.Icon>
                 </materialDesign:Chip>
-                <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                <materialDesign:PopupBox Grid.Column="2"  PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" HorizontalAlignment="Right" HorizontalContentAlignment="Center">
                     <StackPanel>
-                        <Button Content="用户管理" FontFamily="Fonts/HYQiHeiX1-55W" Click="Button_Click"/>
+                        <Button Content="用户管理" FontFamily="微软雅黑" Click="Button_Click"/>
                         <Button Content="Nice Popup" />
                         <Button Content="Can't Touch This" IsEnabled="False" />
                         <Separator/>
                         <Button Content="Goodbye"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontFamily="Fonts/HYQiHeiX1-55W" Text="测试Demo"></TextBlock>
-            </DockPanel>
+            </Grid>
+            <!--
+            <DockPanel>
+
+            </DockPanel>-->
         </materialDesign:ColorZone>
         <Grid>
             <!--<WrapPanel Margin="0,0,0,0" Name="MainCanvas" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}" HorizontalAlignment="Center"/> -->

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Bizerba\2_Test Project\C#\Material Design\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\App.xaml
-4371421399
+5351428499
 2-1869312520
-15-1503448523
+17-37643382
 72-854659585
-controlEditUser.xaml;controlUserCards.xaml;MainWindow.xaml;Test.xaml;
+Controls\UserManager\controlEditUser.xaml;Controls\UserManager\controlUserPanel.xaml;controlUserCards.xaml;MainWindow.xaml;Test.xaml;
 
-False
+True
 

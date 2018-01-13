@@ -9,7 +9,11 @@ namespace MaterialDesignTest.Class
 {
     public class User : INotifyPropertyChanged
     {
-
+        PublicProperties publicProperties;
+        public User()
+        {
+            publicProperties = new PublicProperties();
+        }
         private int userID;
         public int UserID
         {
@@ -63,15 +67,13 @@ namespace MaterialDesignTest.Class
             set
             {
                 topPower = value;
-                CannotDelete = !topPower;
-
                 if (topPower)
                 {
-                    ImagePath = "images/Administrator.png";
+                    ImagePath = "/images/Administrator.png";
                 }
                 else
                 {
-                    ImagePath = "images/Operator.png";
+                    ImagePath = "/images/Operator.png";
                 }
 
                 OnPropertyChanged("TopPower");
@@ -155,16 +157,7 @@ namespace MaterialDesignTest.Class
             }
         }
 
-        private bool cannotDelete = false;
-        public bool CannotDelete
-        {
-            get { return cannotDelete; }
-            set
-            {
-                cannotDelete = value;
-                OnPropertyChanged("CannotDelete");
-            }
-        }
+
 
         private string imagePath;
         public string  ImagePath

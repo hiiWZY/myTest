@@ -577,6 +577,14 @@ namespace MaterialDesignTest {
                 this.column密码.AllowDBNull = false;
                 this.column密码.MaxLength = 50;
                 this.column真实姓名.MaxLength = 50;
+                this.column最高权限.AllowDBNull = false;
+                this.column点检权限.AllowDBNull = false;
+                this.column生产权限.AllowDBNull = false;
+                this.column抽检权限.AllowDBNull = false;
+                this.column返修权限.AllowDBNull = false;
+                this.column编程权限.AllowDBNull = false;
+                this.column浏览权限.AllowDBNull = false;
+                this.column调试权限.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -770,12 +778,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 最高权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.最高权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'最高权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.最高权限Column]));
                 }
                 set {
                     this[this.tableUsers.最高权限Column] = value;
@@ -786,12 +789,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 点检权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.点检权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'点检权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.点检权限Column]));
                 }
                 set {
                     this[this.tableUsers.点检权限Column] = value;
@@ -802,12 +800,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 生产权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.生产权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'生产权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.生产权限Column]));
                 }
                 set {
                     this[this.tableUsers.生产权限Column] = value;
@@ -818,12 +811,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 抽检权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.抽检权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'抽检权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.抽检权限Column]));
                 }
                 set {
                     this[this.tableUsers.抽检权限Column] = value;
@@ -834,12 +822,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 返修权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.返修权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'返修权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.返修权限Column]));
                 }
                 set {
                     this[this.tableUsers.返修权限Column] = value;
@@ -850,12 +833,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 编程权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.编程权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'编程权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.编程权限Column]));
                 }
                 set {
                     this[this.tableUsers.编程权限Column] = value;
@@ -866,12 +844,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 浏览权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.浏览权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'浏览权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.浏览权限Column]));
                 }
                 set {
                     this[this.tableUsers.浏览权限Column] = value;
@@ -882,12 +855,7 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool 调试权限 {
                 get {
-                    try {
-                        return ((bool)(this[this.tableUsers.调试权限Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'调试权限\' in table \'Users\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableUsers.调试权限Column]));
                 }
                 set {
                     this[this.tableUsers.调试权限Column] = value;
@@ -920,102 +888,6 @@ namespace MaterialDesignTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set真实姓名Null() {
                 this[this.tableUsers.真实姓名Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is最高权限Null() {
-                return this.IsNull(this.tableUsers.最高权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set最高权限Null() {
-                this[this.tableUsers.最高权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is点检权限Null() {
-                return this.IsNull(this.tableUsers.点检权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set点检权限Null() {
-                this[this.tableUsers.点检权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is生产权限Null() {
-                return this.IsNull(this.tableUsers.生产权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set生产权限Null() {
-                this[this.tableUsers.生产权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is抽检权限Null() {
-                return this.IsNull(this.tableUsers.抽检权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set抽检权限Null() {
-                this[this.tableUsers.抽检权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is返修权限Null() {
-                return this.IsNull(this.tableUsers.返修权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set返修权限Null() {
-                this[this.tableUsers.返修权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is编程权限Null() {
-                return this.IsNull(this.tableUsers.编程权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set编程权限Null() {
-                this[this.tableUsers.编程权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is浏览权限Null() {
-                return this.IsNull(this.tableUsers.浏览权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set浏览权限Null() {
-                this[this.tableUsers.浏览权限Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is调试权限Null() {
-                return this.IsNull(this.tableUsers.调试权限Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set调试权限Null() {
-                this[this.tableUsers.调试权限Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1206,40 +1078,32 @@ namespace MaterialDesignTest.LeakTestDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Users] WHERE (([Id] = @Original_Id) AND ([用户名] = @Original_用户名) AND ([密码] = @Original_密码) AND ((@IsNull_真实姓名 = 1 AND [真实姓名] IS NULL) OR ([真实姓名] = @Original_真实姓名)) AND ((@IsNull_最高权限 = 1 AND [最高权限] IS NULL) OR ([最高权限] = @Original_最高权限)) AND ((@IsNull_点检权限 = 1 AND [点检权限] IS NULL) OR ([点检权限] = @Original_点检权限)) AND ((@IsNull_生产权限 = 1 AND [生产权限] IS NULL) OR ([生产权限] = @Original_生产权限)) AND ((@IsNull_抽检权限 = 1 AND [抽检权限] IS NULL) OR ([抽检权限] = @Original_抽检权限)) AND ((@IsNull_返修权限 = 1 AND [返修权限] IS NULL) OR ([返修权限] = @Original_返修权限)) AND ((@IsNull_编程权限 = 1 AND [编程权限] IS NULL) OR ([编程权限] = @Original_编程权限)) AND ((@IsNull_浏览权限 = 1 AND [浏览权限] IS NULL) OR ([浏览权限] = @Original_浏览权限)) AND ((@IsNull_调试权限 = 1 AND [调试权限] IS NULL) OR ([调试权限] = @Original_调试权限)) AND ((@IsNull_创建时间 = 1 AND [创建时间] IS NULL) OR ([创建时间] = @Original_创建时间)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Users] WHERE (([Id] = @Original_Id) AND ([用户名] = @Original_用户名) AND ([密码] = @Original_密码) AND ((@IsNull_真实姓名 = 1 AND [真实姓名] IS NULL) OR ([真实姓名] = @Original_真实姓名)) AND ([最高权限] = @Original_最高权限) AND ([点检权限] = @Original_点检权限) AND ([生产权限] = @Original_生产权限) AND ([抽检权限] = @Original_抽检权限) AND ([返修权限] = @Original_返修权限) AND ([编程权限] = @Original_编程权限) AND ([浏览权限] = @Original_浏览权限) AND ([调试权限] = @Original_调试权限) AND ((@IsNull_创建时间 = 1 AND [创建时间] IS NULL) OR ([创建时间] = @Original_创建时间)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_用户名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_密码", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_用户名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_密码", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_真实姓名", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_真实姓名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_最高权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "最高权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_真实姓名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_最高权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "最高权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_点检权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "点检权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_点检权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "点检权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_生产权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "生产权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_生产权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "生产权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_抽检权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "抽检权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_抽检权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "抽检权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_返修权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "返修权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_返修权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "返修权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_编程权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "编程权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_编程权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "编程权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_浏览权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "浏览权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_浏览权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "浏览权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_调试权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "调试权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_调试权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "调试权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_创建时间", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "创建时间", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_创建时间", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "创建时间", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Users] ([Id], [用户名], [密码], [真实姓名], [最高权限], [点检权限], [生产权限], [抽检权限], [返修权限], [编程权限], [浏览权限], [调试权限], [创建时间]) VALUES (@Id, @用户名, @密码, @真实姓名, @最高权限, @点检权限, @生产权限, @抽检权限, @返修权限, @编程权限, @浏览权限, @调试权限, @创建时间);
-SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, 创建时间 FROM Users WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Users] ([Id], [用户名], [密码], [真实姓名], [最高权限], [点检权限], [生产权限], [抽检权限], [返修权限], [编程权限], [浏览权限], [调试权限], [创建时间]) VALUES (@Id, @用户名, @密码, @真实姓名, @最高权限, @点检权限, @生产权限, @抽检权限, @返修权限, @编程权限, @浏览权限, @调试权限, @创建时间);
+SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, 创建时间 FROM Users WHERE (Id = @Id) AND (用户名 = @用户名) ORDER BY 最高权限 DESC";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@用户名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@密码", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@真实姓名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@用户名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@密码", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@真实姓名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@最高权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "最高权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@点检权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "点检权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@生产权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "生产权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1251,13 +1115,13 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@创建时间", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "创建时间", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Users] SET [Id] = @Id, [用户名] = @用户名, [密码] = @密码, [真实姓名] = @真实姓名, [最高权限] = @最高权限, [点检权限] = @点检权限, [生产权限] = @生产权限, [抽检权限] = @抽检权限, [返修权限] = @返修权限, [编程权限] = @编程权限, [浏览权限] = @浏览权限, [调试权限] = @调试权限, [创建时间] = @创建时间 WHERE (([Id] = @Original_Id) AND ([用户名] = @Original_用户名) AND ([密码] = @Original_密码) AND ((@IsNull_真实姓名 = 1 AND [真实姓名] IS NULL) OR ([真实姓名] = @Original_真实姓名)) AND ((@IsNull_最高权限 = 1 AND [最高权限] IS NULL) OR ([最高权限] = @Original_最高权限)) AND ((@IsNull_点检权限 = 1 AND [点检权限] IS NULL) OR ([点检权限] = @Original_点检权限)) AND ((@IsNull_生产权限 = 1 AND [生产权限] IS NULL) OR ([生产权限] = @Original_生产权限)) AND ((@IsNull_抽检权限 = 1 AND [抽检权限] IS NULL) OR ([抽检权限] = @Original_抽检权限)) AND ((@IsNull_返修权限 = 1 AND [返修权限] IS NULL) OR ([返修权限] = @Original_返修权限)) AND ((@IsNull_编程权限 = 1 AND [编程权限] IS NULL) OR ([编程权限] = @Original_编程权限)) AND ((@IsNull_浏览权限 = 1 AND [浏览权限] IS NULL) OR ([浏览权限] = @Original_浏览权限)) AND ((@IsNull_调试权限 = 1 AND [调试权限] IS NULL) OR ([调试权限] = @Original_调试权限)) AND ((@IsNull_创建时间 = 1 AND [创建时间] IS NULL) OR ([创建时间] = @Original_创建时间)));
-SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, 创建时间 FROM Users WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Users] SET [Id] = @Id, [用户名] = @用户名, [密码] = @密码, [真实姓名] = @真实姓名, [最高权限] = @最高权限, [点检权限] = @点检权限, [生产权限] = @生产权限, [抽检权限] = @抽检权限, [返修权限] = @返修权限, [编程权限] = @编程权限, [浏览权限] = @浏览权限, [调试权限] = @调试权限, [创建时间] = @创建时间 WHERE (([Id] = @Original_Id) AND ([用户名] = @Original_用户名) AND ([密码] = @Original_密码) AND ((@IsNull_真实姓名 = 1 AND [真实姓名] IS NULL) OR ([真实姓名] = @Original_真实姓名)) AND ([最高权限] = @Original_最高权限) AND ([点检权限] = @Original_点检权限) AND ([生产权限] = @Original_生产权限) AND ([抽检权限] = @Original_抽检权限) AND ([返修权限] = @Original_返修权限) AND ([编程权限] = @Original_编程权限) AND ([浏览权限] = @Original_浏览权限) AND ([调试权限] = @Original_调试权限) AND ((@IsNull_创建时间 = 1 AND [创建时间] IS NULL) OR ([创建时间] = @Original_创建时间)));
+SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, 创建时间 FROM Users WHERE (Id = @Id) AND (用户名 = @用户名) ORDER BY 最高权限 DESC";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@用户名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@密码", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@真实姓名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@用户名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@密码", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@真实姓名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@最高权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "最高权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@点检权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "点检权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@生产权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "生产权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1268,25 +1132,17 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@调试权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "调试权限", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@创建时间", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "创建时间", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_用户名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_密码", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_用户名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "用户名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_密码", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "密码", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_真实姓名", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_真实姓名", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_最高权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "最高权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_真实姓名", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "真实姓名", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_最高权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "最高权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_点检权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "点检权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_点检权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "点检权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_生产权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "生产权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_生产权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "生产权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_抽检权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "抽检权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_抽检权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "抽检权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_返修权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "返修权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_返修权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "返修权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_编程权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "编程权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_编程权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "编程权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_浏览权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "浏览权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_浏览权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "浏览权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_调试权限", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "调试权限", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_调试权限", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "调试权限", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_创建时间", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "创建时间", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_创建时间", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "创建时间", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1305,8 +1161,8 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, 创建时间 FR" +
-                "OM dbo.Users";
+            this._commandCollection[0].CommandText = "SELECT        Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, " +
+                "创建时间\r\nFROM            Users\r\nORDER BY 最高权限 DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -1415,7 +1271,7 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_用户名, string Original_密码, string Original_真实姓名, global::System.Nullable<bool> Original_最高权限, global::System.Nullable<bool> Original_点检权限, global::System.Nullable<bool> Original_生产权限, global::System.Nullable<bool> Original_抽检权限, global::System.Nullable<bool> Original_返修权限, global::System.Nullable<bool> Original_编程权限, global::System.Nullable<bool> Original_浏览权限, global::System.Nullable<bool> Original_调试权限, global::System.Nullable<global::System.DateTime> Original_创建时间) {
+        public virtual int Delete(int Original_Id, string Original_用户名, string Original_密码, string Original_真实姓名, bool Original_最高权限, bool Original_点检权限, bool Original_生产权限, bool Original_抽检权限, bool Original_返修权限, bool Original_编程权限, bool Original_浏览权限, bool Original_调试权限, global::System.Nullable<global::System.DateTime> Original_创建时间) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_用户名 == null)) {
                 throw new global::System.ArgumentNullException("Original_用户名");
@@ -1437,77 +1293,21 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_真实姓名));
             }
-            if ((Original_最高权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_最高权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_点检权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_点检权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_生产权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_生产权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_抽检权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_抽检权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_返修权限.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_最高权限));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_点检权限));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_生产权限));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_抽检权限));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_返修权限));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_编程权限));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((bool)(Original_浏览权限));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_调试权限));
+            if ((Original_创建时间.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_返修权限.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.DateTime)(Original_创建时间.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((Original_编程权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_编程权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((Original_浏览权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_浏览权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((Original_调试权限.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_调试权限.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_创建时间.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((System.DateTime)(Original_创建时间.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1529,7 +1329,7 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string 用户名, string 密码, string 真实姓名, global::System.Nullable<bool> 最高权限, global::System.Nullable<bool> 点检权限, global::System.Nullable<bool> 生产权限, global::System.Nullable<bool> 抽检权限, global::System.Nullable<bool> 返修权限, global::System.Nullable<bool> 编程权限, global::System.Nullable<bool> 浏览权限, global::System.Nullable<bool> 调试权限, global::System.Nullable<global::System.DateTime> 创建时间) {
+        public virtual int Insert(int Id, string 用户名, string 密码, string 真实姓名, bool 最高权限, bool 点检权限, bool 生产权限, bool 抽检权限, bool 返修权限, bool 编程权限, bool 浏览权限, bool 调试权限, global::System.Nullable<global::System.DateTime> 创建时间) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((用户名 == null)) {
                 throw new global::System.ArgumentNullException("用户名");
@@ -1549,54 +1349,14 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(真实姓名));
             }
-            if ((最高权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(最高权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((点检权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(点检权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((生产权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(生产权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((抽检权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(抽检权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((返修权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(返修权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((编程权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(编程权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((浏览权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(浏览权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((调试权限.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(调试权限.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(最高权限));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(点检权限));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(生产权限));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(抽检权限));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(返修权限));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(编程权限));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(浏览权限));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(调试权限));
             if ((创建时间.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(创建时间.Value));
             }
@@ -1628,27 +1388,27 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
                     string 用户名, 
                     string 密码, 
                     string 真实姓名, 
-                    global::System.Nullable<bool> 最高权限, 
-                    global::System.Nullable<bool> 点检权限, 
-                    global::System.Nullable<bool> 生产权限, 
-                    global::System.Nullable<bool> 抽检权限, 
-                    global::System.Nullable<bool> 返修权限, 
-                    global::System.Nullable<bool> 编程权限, 
-                    global::System.Nullable<bool> 浏览权限, 
-                    global::System.Nullable<bool> 调试权限, 
+                    bool 最高权限, 
+                    bool 点检权限, 
+                    bool 生产权限, 
+                    bool 抽检权限, 
+                    bool 返修权限, 
+                    bool 编程权限, 
+                    bool 浏览权限, 
+                    bool 调试权限, 
                     global::System.Nullable<global::System.DateTime> 创建时间, 
                     int Original_Id, 
                     string Original_用户名, 
                     string Original_密码, 
                     string Original_真实姓名, 
-                    global::System.Nullable<bool> Original_最高权限, 
-                    global::System.Nullable<bool> Original_点检权限, 
-                    global::System.Nullable<bool> Original_生产权限, 
-                    global::System.Nullable<bool> Original_抽检权限, 
-                    global::System.Nullable<bool> Original_返修权限, 
-                    global::System.Nullable<bool> Original_编程权限, 
-                    global::System.Nullable<bool> Original_浏览权限, 
-                    global::System.Nullable<bool> Original_调试权限, 
+                    bool Original_最高权限, 
+                    bool Original_点检权限, 
+                    bool Original_生产权限, 
+                    bool Original_抽检权限, 
+                    bool Original_返修权限, 
+                    bool Original_编程权限, 
+                    bool Original_浏览权限, 
+                    bool Original_调试权限, 
                     global::System.Nullable<global::System.DateTime> Original_创建时间) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
             if ((用户名 == null)) {
@@ -1669,54 +1429,14 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(真实姓名));
             }
-            if ((最高权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(最高权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((点检权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(点检权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((生产权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(生产权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((抽检权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(抽检权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((返修权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(返修权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((编程权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(编程权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((浏览权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(浏览权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((调试权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(调试权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(最高权限));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(点检权限));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(生产权限));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(抽检权限));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(返修权限));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(编程权限));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(浏览权限));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(调试权限));
             if ((创建时间.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(创建时间.Value));
             }
@@ -1744,77 +1464,21 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_真实姓名));
             }
-            if ((Original_最高权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_最高权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((Original_点检权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(Original_点检权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((Original_生产权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_生产权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Original_抽检权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(Original_抽检权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((Original_返修权限.HasValue == true)) {
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_最高权限));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_点检权限));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((bool)(Original_生产权限));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(Original_抽检权限));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(Original_返修权限));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_编程权限));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((bool)(Original_浏览权限));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(Original_调试权限));
+            if ((Original_创建时间.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((bool)(Original_返修权限.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(Original_创建时间.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((Original_编程权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(Original_编程权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            if ((Original_浏览权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_浏览权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            if ((Original_调试权限.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_调试权限.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            if ((Original_创建时间.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((System.DateTime)(Original_创建时间.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1840,27 +1504,27 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
                     string 用户名, 
                     string 密码, 
                     string 真实姓名, 
-                    global::System.Nullable<bool> 最高权限, 
-                    global::System.Nullable<bool> 点检权限, 
-                    global::System.Nullable<bool> 生产权限, 
-                    global::System.Nullable<bool> 抽检权限, 
-                    global::System.Nullable<bool> 返修权限, 
-                    global::System.Nullable<bool> 编程权限, 
-                    global::System.Nullable<bool> 浏览权限, 
-                    global::System.Nullable<bool> 调试权限, 
+                    bool 最高权限, 
+                    bool 点检权限, 
+                    bool 生产权限, 
+                    bool 抽检权限, 
+                    bool 返修权限, 
+                    bool 编程权限, 
+                    bool 浏览权限, 
+                    bool 调试权限, 
                     global::System.Nullable<global::System.DateTime> 创建时间, 
                     int Original_Id, 
                     string Original_用户名, 
                     string Original_密码, 
                     string Original_真实姓名, 
-                    global::System.Nullable<bool> Original_最高权限, 
-                    global::System.Nullable<bool> Original_点检权限, 
-                    global::System.Nullable<bool> Original_生产权限, 
-                    global::System.Nullable<bool> Original_抽检权限, 
-                    global::System.Nullable<bool> Original_返修权限, 
-                    global::System.Nullable<bool> Original_编程权限, 
-                    global::System.Nullable<bool> Original_浏览权限, 
-                    global::System.Nullable<bool> Original_调试权限, 
+                    bool Original_最高权限, 
+                    bool Original_点检权限, 
+                    bool Original_生产权限, 
+                    bool Original_抽检权限, 
+                    bool Original_返修权限, 
+                    bool Original_编程权限, 
+                    bool Original_浏览权限, 
+                    bool Original_调试权限, 
                     global::System.Nullable<global::System.DateTime> Original_创建时间) {
             return this.Update(Original_Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产权限, 抽检权限, 返修权限, 编程权限, 浏览权限, 调试权限, 创建时间, Original_Id, Original_用户名, Original_密码, Original_真实姓名, Original_最高权限, Original_点检权限, Original_生产权限, Original_抽检权限, Original_返修权限, Original_编程权限, Original_浏览权限, Original_调试权限, Original_创建时间);
         }
@@ -1897,7 +1561,7 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertUser(int Id, string 用户名, string 密码, string 真实姓名, global::System.Nullable<bool> 最高权限, global::System.Nullable<bool> 点检权限, global::System.Nullable<bool> 生产权限, global::System.Nullable<bool> 抽检权限, global::System.Nullable<bool> 返修权限, global::System.Nullable<bool> 编程权限, global::System.Nullable<bool> 浏览权限, global::System.Nullable<bool> 调试权限, global::System.Nullable<global::System.DateTime> 创建时间) {
+        public virtual int InsertUser(int Id, string 用户名, string 密码, string 真实姓名, bool 最高权限, bool 点检权限, bool 生产权限, bool 抽检权限, bool 返修权限, bool 编程权限, bool 浏览权限, bool 调试权限, global::System.Nullable<global::System.DateTime> 创建时间) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(Id));
             if ((用户名 == null)) {
@@ -1918,54 +1582,14 @@ SELECT Id, 用户名, 密码, 真实姓名, 最高权限, 点检权限, 生产�
             else {
                 command.Parameters[3].Value = ((string)(真实姓名));
             }
-            if ((最高权限.HasValue == true)) {
-                command.Parameters[4].Value = ((bool)(最高权限.Value));
-            }
-            else {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((点检权限.HasValue == true)) {
-                command.Parameters[5].Value = ((bool)(点检权限.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((生产权限.HasValue == true)) {
-                command.Parameters[6].Value = ((bool)(生产权限.Value));
-            }
-            else {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((抽检权限.HasValue == true)) {
-                command.Parameters[7].Value = ((bool)(抽检权限.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((返修权限.HasValue == true)) {
-                command.Parameters[8].Value = ((bool)(返修权限.Value));
-            }
-            else {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((编程权限.HasValue == true)) {
-                command.Parameters[9].Value = ((bool)(编程权限.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((浏览权限.HasValue == true)) {
-                command.Parameters[10].Value = ((bool)(浏览权限.Value));
-            }
-            else {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((调试权限.HasValue == true)) {
-                command.Parameters[11].Value = ((bool)(调试权限.Value));
-            }
-            else {
-                command.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            command.Parameters[4].Value = ((bool)(最高权限));
+            command.Parameters[5].Value = ((bool)(点检权限));
+            command.Parameters[6].Value = ((bool)(生产权限));
+            command.Parameters[7].Value = ((bool)(抽检权限));
+            command.Parameters[8].Value = ((bool)(返修权限));
+            command.Parameters[9].Value = ((bool)(编程权限));
+            command.Parameters[10].Value = ((bool)(浏览权限));
+            command.Parameters[11].Value = ((bool)(调试权限));
             if ((创建时间.HasValue == true)) {
                 command.Parameters[12].Value = ((System.DateTime)(创建时间.Value));
             }

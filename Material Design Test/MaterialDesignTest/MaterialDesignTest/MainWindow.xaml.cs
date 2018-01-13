@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignTest.LeakTestDataSetTableAdapters;
+using MaterialDesignTest.Class;
+using System.Windows.Controls.Primitives;
 
 namespace MaterialDesignTest
 {
@@ -25,14 +27,19 @@ namespace MaterialDesignTest
         public MaterialDesignTest.LeakTestDataSet leakTestDataSet;
         public MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter;
         public System.Windows.Data.CollectionViewSource usersViewSource ;
-        //UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
-
-
-
+        PublicProperties publicProperties;
         public MainWindow()
         {
             InitializeComponent();
+            publicProperties = new PublicProperties();
         }
+        #region fields
+
+        #endregion
+
+        #region Propertity
+
+        #endregion
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -41,16 +48,18 @@ namespace MaterialDesignTest
             leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
             usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
             usersViewSource.View.MoveCurrentToFirst();
+            SetBind();
             LoadUserCards();
         }
 
+        private void SetBind()
+        {
+            this.CurrentUserIcon.SetBinding(MaterialDesignThemes.Wpf.Chip.VisibilityProperty, new Binding { Path = new PropertyPath("ShowChips"), Source = this.publicProperties, Mode = BindingMode.OneWay });
+            this.wPromptInfo.SetBinding(TextBlock.TextProperty, new Binding { Path = new PropertyPath("PromptInfo"), Source = this.publicProperties, Mode = BindingMode.OneWay });
+        }
 
         private void LoadUserCards()
         {
-            //LeakTestDataSet.UsersDataTable usersDataTable = new LeakTestDataSet.UsersDataTable();
-            //usersTableAdapter.Fill(usersDataTable);
-
-            //usersViewSource.View.MoveCurrentToFirst();
             leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
             MainCanvas.Children.Clear();
             controlEditUser[] cEditUser = new controlEditUser[(int)leakTestDataSetUsersTableAdapter.GetUsersScalar()];

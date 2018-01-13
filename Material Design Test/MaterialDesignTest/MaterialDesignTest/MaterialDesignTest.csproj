@@ -87,10 +87,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\PublicProperties.cs" />
+    <Compile Include="Controls\UserManager\controlUserPanel.xaml.cs">
+      <DependentUpon>controlUserPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
-    <Page Include="controlEditUser.xaml">
+    <Page Include="Controls\UserManager\controlEditUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserManager\controlUserPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,7 +115,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\User.cs" />
-    <Compile Include="controlEditUser.xaml.cs">
+    <Compile Include="Controls\UserManager\controlEditUser.xaml.cs">
       <DependentUpon>controlEditUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="controlUserCards.xaml.cs">
