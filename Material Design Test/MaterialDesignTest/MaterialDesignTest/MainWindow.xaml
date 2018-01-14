@@ -35,7 +35,7 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <TextBlock Name="wPromptInfo" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontFamily="微软雅黑" Text="测试Demo"></TextBlock>
-                <materialDesign:Chip Name="CurrentUserIcon"  Grid.Column="1" Margin="0,0,0,0" Content="王震宇"  FontFamily="微软雅黑" FontSize="15" IsEnabled="False" Visibility="Visible" HorizontalAlignment="Right">
+                <materialDesign:Chip Name="CurrentUserIcon"  Visibility="Visible"  Grid.Column="1" Margin="0,0,0,0" Content="王震宇"  FontFamily="微软雅黑" FontSize="15" IsEnabled="False" HorizontalAlignment="Right">
                     <materialDesign:Chip.Icon>
                         <Image  Source="images/Administrator.Png" />
                     </materialDesign:Chip.Icon>

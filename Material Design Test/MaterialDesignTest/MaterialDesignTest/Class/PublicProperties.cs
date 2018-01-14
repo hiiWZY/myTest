@@ -13,15 +13,31 @@ namespace MaterialDesignTest.Class
         #region fileds
         private User currentUser;
         private string promptInfo;
+        private bool isCurrentUserExist;
+        private Visibility showChips= Visibility.Hidden;
         #endregion
         #region properties
 
         public User CurrentUser
         {
             get
-            { return currentUser; }
+            {
+                if (currentUser==null)
+                {
+                    PromptInfo = "请选择登录用户";
+                }
+                return currentUser;
+            }
             set
-            { currentUser = value; OnPropertyChanged("CurrentUser"); }
+            {
+                currentUser = value;
+                if (currentUser != null)
+                {
+                    IsCurrentUserExist= true;
+                    ShowChips = Visibility.Visible;
+                }
+                OnPropertyChanged("CurrentUser");
+            }
         }
 
 
@@ -29,8 +45,15 @@ namespace MaterialDesignTest.Class
         {
             get
             {
-                return currentUser != null;
+                return isCurrentUserExist;
             }
+            set
+            {
+                isCurrentUserExist = value;
+                OnPropertyChanged("IsCurrentUserExist");
+            }
+            
+             
         }
 
         public string PromptInfo { get => promptInfo; set { promptInfo = value; OnPropertyChanged("PromptInfo"); } }
@@ -39,15 +62,12 @@ namespace MaterialDesignTest.Class
         {
             get
             {
-                if (IsCurrentUserExist)
-                {
-                    return Visibility.Visible;
-                }
-                else
-                {
-                    PromptInfo = "请选择登录用户";
-                    return Visibility.Hidden;
-                }
+                return showChips;
+            }
+            set
+            {
+                showChips = value;
+                OnPropertyChanged("ShowChips");
             }
         }
 

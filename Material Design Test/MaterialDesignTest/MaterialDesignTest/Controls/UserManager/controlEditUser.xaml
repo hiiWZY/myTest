@@ -20,11 +20,44 @@
     </UserControl.Resources>
 
     <Grid>
-        <materialDesign:DialogHost>
-            <!--HorizontalAlignment="Center"
+        <materialDesign:DialogHost
+            HorizontalAlignment="Center"
 	        VerticalAlignment="Center"
-	        DialogClosing="Sample1_DialogHost_OnDialogClosing">
-            用来输入面以登录的对话框对话框-->
+	        DialogClosing="DialogHost_DialogClosing">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel  Margin="16">
+                    <TextBlock FontFamily="微软雅黑">请输入密码</TextBlock>
+                    <PasswordBox
+				    x:Name="LoginPasswordBox"
+				    Margin="0,8,0,0"
+				    HorizontalAlignment="Stretch" />
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button
+                        FontFamily="微软雅黑"
+					    Margin="0,8,8,0"
+					    Command="materialDesign:DialogHost.CloseDialogCommand"
+					    IsDefault="True"
+					    Style="{StaticResource MaterialDesignFlatButton}">
+                            <Button.CommandParameter>
+                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">True</system:Boolean>
+                            </Button.CommandParameter>
+                            确认
+                        </Button>
+                        <Button
+                        FontFamily="微软雅黑"
+					    Margin="0,8,8,0"
+					    Command="materialDesign:DialogHost.CloseDialogCommand"
+					    IsCancel="True"
+					    Style="{StaticResource MaterialDesignFlatButton}">
+                            <Button.CommandParameter>
+                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">False</system:Boolean>
+                            </Button.CommandParameter>
+                            取消
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+
             <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" Margin="4 4 4 4" >
             <materialDesign:Flipper.FrontContent>
                 <Grid Height="448" Width="350">
@@ -48,14 +81,14 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" Margin="0 16 30 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="LoginButton" >登录</Button>
+                                <Button Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Margin="0 16 30 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="LoginButton" >登录</Button>
                             <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:Flipper.FlipCommand}" Margin="0 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="EditButton" >编辑</Button>
                             <Button Grid.Column="2" Style="{StaticResource MaterialDesignFlatButton}" Margin="30 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="DeleteButton" >删除</Button>
                         </Grid>
                     </StackPanel>
                 </Grid>
-            </materialDesign:Flipper.FrontContent>
-            <materialDesign:Flipper.BackContent>
+                </materialDesign:Flipper.FrontContent> 
+                <materialDesign:Flipper.BackContent>
                 <Grid Height="448" Width="350">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />

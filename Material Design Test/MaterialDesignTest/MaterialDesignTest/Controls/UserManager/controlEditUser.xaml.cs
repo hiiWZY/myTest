@@ -155,6 +155,21 @@ namespace MaterialDesignTest
         {
             user.UserPassword = UserPassword.Password;
         }
+
+        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        {
+            string loginPassword = LoginPasswordBox.Password;
+            LoginPasswordBox.Clear();
+            if (!Equals(eventArgs.Parameter, true)) return;
+
+            if (!string.IsNullOrWhiteSpace(loginPassword))
+            {
+                if (leakTestDataSetUsersTableAdapter.IsPasswordRight(user.UserName, loginPassword) >0)
+                {
+                    publicProperties.CurrentUser = user;
+                }
+            }
+        }
     }
 
 }

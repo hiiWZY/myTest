@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Bizerba\2_Test Project\C#\Material Design\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\obj\Debug\
 MaterialDesignTest
 none
 false
 DEBUG;TRACE
-C:\Bizerba\2_Test Project\C#\Material Design\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\App.xaml
+F:\Github\Material Design Test\myTest\Material Design Test\MaterialDesignTest\MaterialDesignTest\App.xaml
 5351428499
 2-1869312520
-17-37643382
-72-854659585
+17-1391845068
+721223489521
 Controls\UserManager\controlEditUser.xaml;Controls\UserManager\controlUserPanel.xaml;controlUserCards.xaml;MainWindow.xaml;Test.xaml;
 
-True
+False
 

@@ -31,7 +31,7 @@ namespace MaterialDesignTest
         public MainWindow()
         {
             InitializeComponent();
-            publicProperties = new PublicProperties();
+
         }
         #region fields
 
@@ -48,6 +48,7 @@ namespace MaterialDesignTest
             leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
             usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
             usersViewSource.View.MoveCurrentToFirst();
+            publicProperties = new PublicProperties();
             SetBind();
             LoadUserCards();
         }
