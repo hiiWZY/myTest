@@ -26,6 +26,8 @@ namespace MaterialDesignTest
         public User user;
         PublicProperties publicProperties;
         MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter= new MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter();
+        BoolReverseConverter boolReverseConverter = new BoolReverseConverter();
+
         public controlEditUser()
         {
             InitializeComponent();
