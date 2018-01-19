@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
 namespace MaterialDesignTest.Class
 {
-    class PublicProperties : INotifyPropertyChanged
+    public class PublicProperties : INotifyPropertyChanged
     {
         #region fileds
         private User currentUser;
@@ -30,13 +31,17 @@ namespace MaterialDesignTest.Class
             }
             set
             {
-                currentUser = value;
+                if (value!= currentUser)
+                {
+                    currentUser = value;
+                    OnPropertyChanged();
+                }
                 if (currentUser != null)
                 {
                     IsCurrentUserExist= true;
                     ShowChips = Visibility.Visible;
                 }
-                OnPropertyChanged("CurrentUser");
+
             }
         }
 
@@ -47,16 +52,19 @@ namespace MaterialDesignTest.Class
             {
                 return isCurrentUserExist;
             }
-            set
+            private set
             {
-                isCurrentUserExist = value;
-                OnPropertyChanged("IsCurrentUserExist");
+                if (value!= isCurrentUserExist)
+                {
+                    isCurrentUserExist = value;
+                    OnPropertyChanged();
+                }
             }
             
              
         }
 
-        public string PromptInfo { get => promptInfo; set { promptInfo = value; OnPropertyChanged("PromptInfo"); } }
+        public string PromptInfo { get => promptInfo; set { promptInfo = value; OnPropertyChanged(); } }
 
         public Visibility ShowChips
         {
@@ -64,10 +72,13 @@ namespace MaterialDesignTest.Class
             {
                 return showChips;
             }
-            set
+            private set
             {
-                showChips = value;
-                OnPropertyChanged("ShowChips");
+                if (value!= showChips)
+                {
+                    showChips = value;
+                    OnPropertyChanged();
+                }
             }
         }
 
@@ -76,12 +87,9 @@ namespace MaterialDesignTest.Class
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public virtual void OnPropertyChanged(string propertyName)
+        public virtual void OnPropertyChanged([CallerMemberName] String propertyName = "")
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

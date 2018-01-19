@@ -27,11 +27,12 @@ namespace MaterialDesignTest
         public MaterialDesignTest.LeakTestDataSet leakTestDataSet;
         public MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter;
         public System.Windows.Data.CollectionViewSource usersViewSource ;
-        PublicProperties publicProperties;
+        public static PublicProperties publicProperties;
         public MainWindow()
         {
             InitializeComponent();
-
+            publicProperties = new PublicProperties();
+            this.DataContext = publicProperties;
         }
         #region fields
 
@@ -48,15 +49,14 @@ namespace MaterialDesignTest
             leakTestDataSetUsersTableAdapter.Fill(leakTestDataSet.Users);
             usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
             usersViewSource.View.MoveCurrentToFirst();
-            publicProperties = new PublicProperties();
-            SetBind();
+            //SetBind();
             LoadUserCards();
         }
 
         private void SetBind()
         {
-            this.CurrentUserIcon.SetBinding(MaterialDesignThemes.Wpf.Chip.VisibilityProperty, new Binding { Path = new PropertyPath("ShowChips"), Source = this.publicProperties, Mode = BindingMode.OneWay });
-            this.wPromptInfo.SetBinding(TextBlock.TextProperty, new Binding { Path = new PropertyPath("PromptInfo"), Source = this.publicProperties, Mode = BindingMode.OneWay });
+            //this.CurrentUserIcon.SetBinding(MaterialDesignThemes.Wpf.Chip.VisibilityProperty, new Binding { Path = new PropertyPath("ShowChips"), Source=publicProperties, Mode = BindingMode.OneWay });
+            //this.wPromptInfo.SetBinding(TextBlock.TextProperty, new Binding { Path = new PropertyPath("PromptInfo"), Source = this.publicProperties, Mode = BindingMode.OneWay });
         }
 
         private void LoadUserCards()

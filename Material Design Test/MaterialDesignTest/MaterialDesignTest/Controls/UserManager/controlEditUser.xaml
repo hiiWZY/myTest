@@ -84,7 +84,7 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                                 <Button Grid.Column="0" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Margin="0 16 30 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="LoginButton" >登录</Button>
-                            <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:Flipper.FlipCommand}" Margin="0 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="EditButton" >编辑</Button>
+                                <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:Flipper.FlipCommand}" Margin="0 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="EditButton" IsEnabled="{Binding Path=IsEditButtonEnable}" >编辑</Button>
                             <Button Grid.Column="2" Style="{StaticResource MaterialDesignFlatButton}" Margin="30 16 0 0" HorizontalAlignment="Center" FontFamily="微软雅黑" FontSize="20"  Name="DeleteButton" >删除</Button>
                         </Grid>
                     </StackPanel>

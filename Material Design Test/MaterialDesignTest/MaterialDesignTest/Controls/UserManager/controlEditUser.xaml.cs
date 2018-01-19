@@ -14,17 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignTest.Class;
 using System.Windows.Controls.Primitives;
-
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MaterialDesignTest
 {
     /// <summary>
     /// Interaction logic for controlEditUser.xaml
     /// </summary>
-    public partial class controlEditUser : UserControl
+    public partial class controlEditUser : UserControl, INotifyPropertyChanged
     {
         public User user;
-        PublicProperties publicProperties;
         MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter leakTestDataSetUsersTableAdapter= new MaterialDesignTest.LeakTestDataSetTableAdapters.UsersTableAdapter();
         BoolReverseConverter boolReverseConverter = new BoolReverseConverter();
 
@@ -32,7 +32,7 @@ namespace MaterialDesignTest
         {
             InitializeComponent();
             user = new User();
-            publicProperties = new PublicProperties();
+            this.DataContext = this;
             setBind();
         }
 
@@ -41,19 +41,19 @@ namespace MaterialDesignTest
         {
             get
             {
-                if (!publicProperties.IsCurrentUserExist)            //是否已经有用户登录，没有的话则可以选择登录用户
+                if (!MainWindow.publicProperties.IsCurrentUserExist)            //是否已经有用户登录，没有的话则可以选择登录用户
                 {
                     return true;
                 }
                 else
                 {
-                    if (user == publicProperties.CurrentUser)       //不能重复登录
+                    if (user == MainWindow.publicProperties.CurrentUser)       //不能重复登录
                     {
                         return false;
                     }
                     else
                     {
-                        if (publicProperties.CurrentUser.TopPower)      //已登录用户有最高权限，可以切换至其他用户
+                        if (MainWindow.publicProperties.CurrentUser.TopPower)      //已登录用户有最高权限，可以切换至其他用户
                         {
                             return true;
                         }
@@ -67,64 +67,84 @@ namespace MaterialDesignTest
             }
         }
 
+        private bool isEditButtonEnable;
         public bool IsEditButtonEnable
         {
             get
             {
-                if (publicProperties.IsCurrentUserExist)            //是否已经有用户登录，没有的话则不能编辑任何用户
+                return isEditButtonEnable;
+            }
+            private set
+            {
+                if (MainWindow.publicProperties.IsCurrentUserExist)            //是否已经有用户登录，没有的话则不能编辑任何用户
                 {
-                    if (publicProperties.CurrentUser.TopPower)      //已登录用户有最高权限，可编辑所有用户
+                    if (MainWindow.publicProperties.CurrentUser.TopPower)      //已登录用户有最高权限，可编辑所有用户
                     {
-                        return true;
+                        isEditButtonEnable = true;
                     }
                     else
                     {
-                        if (user == publicProperties.CurrentUser)   //已登录用户没有最高权限，可编辑自己的信息
+                        if (user == MainWindow.publicProperties.CurrentUser)   //已登录用户没有最高权限，可编辑自己的信息
                         {
-                            return true;
+                            isEditButtonEnable = true;
                         }
                         else
                         {
-                            return false;
+                            isEditButtonEnable = false;
                         }
                     }
                 }
                 else
                 {
-                    return false;
+                    isEditButtonEnable = false;
                 }
-
+                OnPropertyChanged();
             }
         }
 
+        
+
+
+
+        private bool isDeleteButtonEnable;
         public bool IsDeleteButtonEnable
         {
             get
             {
-                if (publicProperties.IsCurrentUserExist)
+                return isDeleteButtonEnable;
+            }
+            private set
+            {
+                if (MainWindow.publicProperties.IsCurrentUserExist)
                 {
-                    if (user == publicProperties.CurrentUser)
+                    if (user == MainWindow.publicProperties.CurrentUser)
                     {
-                        return false;
+                        isDeleteButtonEnable = false;
                     }
                     else
                     {
                         if (user.TopPower)
                         {
-                            return true;
+                            isDeleteButtonEnable = true;
                         }
                         else
                         {
-                            return false;
+                            isDeleteButtonEnable = false;
                         }
                     }
                 }
                 else
                 {
-                    return false;
+                    isDeleteButtonEnable = false;
                 }
-
+                OnPropertyChanged();
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public virtual void OnPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
 
@@ -142,9 +162,9 @@ namespace MaterialDesignTest
             this.Program.SetBinding(ToggleButton.IsCheckedProperty, new Binding { Path = new PropertyPath("Program"), Source = this.user, Mode = BindingMode.TwoWay });
             this.Browse.SetBinding(ToggleButton.IsCheckedProperty, new Binding { Path = new PropertyPath("Browse"), Source = this.user, Mode = BindingMode.TwoWay });
             this.DebugMode.SetBinding(ToggleButton.IsCheckedProperty, new Binding { Path = new PropertyPath("DebugMode"), Source = this.user, Mode = BindingMode.TwoWay });
-            this.DeleteButton.SetBinding(Button.IsEnabledProperty, new Binding { Path = new PropertyPath("IsDeleteButtonEnable"), Source = this, Mode = BindingMode.OneWay });
+            //this.DeleteButton.SetBinding(Button.IsEnabledProperty, new Binding { Path = new PropertyPath("IsDeleteButtonEnable"), Source = this, Mode = BindingMode.OneWay });
             this.LoginButton.SetBinding(Button.IsEnabledProperty, new Binding { Path = new PropertyPath("IsLoginButtonEnable"), Source = this, Mode = BindingMode.OneWay });
-            this.EditButton.SetBinding(Button.IsEnabledProperty, new Binding { Path = new PropertyPath("IsEditButtonEnable"), Source = this, Mode = BindingMode.OneWay });
+            //this.EditButton.SetBinding(Button.IsEnabledProperty, new Binding { Path = new PropertyPath("IsEditButtonEnable"), Source = this, Mode = BindingMode.OneWay });
             this.UserPhoto.SetBinding(Image.SourceProperty, new Binding { Path = new PropertyPath("ImagePath"), Source = this.user, Mode = BindingMode.OneWay });
         }
 
@@ -168,7 +188,9 @@ namespace MaterialDesignTest
             {
                 if (leakTestDataSetUsersTableAdapter.IsPasswordRight(user.UserName, loginPassword) >0)
                 {
-                    publicProperties.CurrentUser = user;
+                    MainWindow.publicProperties.CurrentUser = user;
+                    IsDeleteButtonEnable = false;
+                    IsEditButtonEnable = false;
                 }
             }
         }
